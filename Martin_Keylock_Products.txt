@@ -1,0 +1,5 @@
+product_id, product_name, category_name_of_product, price, quantity
+GR001,Test1,GR__,10.00,1
+HB002,Test2,HB__,20.00,5
+ZZ003,Test3,ZZ__,30.00,10
+AA222,Able,Abler 2222,4013.00,200

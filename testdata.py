@@ -1,6 +1,8 @@
-product1 = Product("GR01", "Test1", "GR__", 1, 10.00)
-product2 = Product("HB02", "Test2", "HB__", 5, 20.00)
-product3 = Product("ZZ03", "Test3", "ZZ__", 10, 30.00)
+import Product
+
+product1 = Product("GR001", "Test1", "GR__", 1, 10.00)
+product2 = Product("HB002", "Test2", "HB__", 5, 20.00)
+product3 = Product("ZZ003", "Test3", "ZZ__", 10, 30.00)
 
 p_list = []
 p_list.append(product1)
