@@ -2,7 +2,7 @@
 
 
 def main(): 
-    from part_a import Product 
+    from old.part_a import Product 
     import os
 
     def seed_data(): 
@@ -34,7 +34,8 @@ def main():
         if len(product_id) == 5 and product_id[:2].isupper() and product_id[2:].isdigit() :
             return True 
 
-    def get_product_data(num_products):
+    def get_product_data(num_products, min=1, max=50):
+        product_list = []
         for i in range(num_products):
             product_id = input("Product ID: ")
 
@@ -44,10 +45,12 @@ def main():
 
             category_name_of_product = input("category_name_of_product: ")
             product_name = input("Product Name: ")
-            quantity = input("Quantity: ")
+            quantity = input("Quantity (between {min} and {max}: ")
             price = input("Price: ")
                     
-            products_list.append(Product(product_id, category_name_of_product, product_name, quantity, price))
+            product_list.append(Product(product_id, category_name_of_product, product_name, quantity, price))
+
+        return product_list 
 
     def display_all_products(product_list):
         print("\n All products:")

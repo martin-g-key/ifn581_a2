@@ -1,0 +1,2 @@
+product_id, product_name, category_name_of_product, price, quantity
+OT002,AG Roundeup,Others,6032.00,23
