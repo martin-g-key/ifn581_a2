@@ -56,14 +56,14 @@ def main():
         string += "Name: Martin Keylock\n"
         string += "StudentID: n12882933\n"
         string += "Hello, welcome to assignment 2.\n"
-        string += "------------------------------------\n"
+        string += "------------------------------------"
         print(string)    
 
 
     def input_value(min=1, max=50):
         # data validation for input
         while True: 
-            first = input(f"Please provide an integer between {min} and {max}: ")
+            first = input(f"\nHow many products would you like to add?\nPlease provide an integer between {min} and {max}: ")
             try: 
                 num = int(first) 
             except ValueError:
@@ -83,7 +83,7 @@ def main():
     def get_product_data(num_products, min=1, max=50):
         product_list = []
 
-        print("\nGet all product data from product list process:")
+        print("\nPlease fill out the following product details for each product that you want to add:")
 
         # assumption that num_products will always be nu (output of input_value())
         for i in range(num_products):
@@ -91,7 +91,7 @@ def main():
 
             # input validation
             while not is_valid(product):
-                print("Please provide a product_id in a valid format.")
+                print("\nPlease fill out the following product details for each product that you want to add:")
                 product = input("Product ID: ")
 
             # product_name is a string --> no input validation applied
@@ -116,12 +116,13 @@ def main():
 
             # instantiate Product object and append to list  
             product_list.append(Product(product, product_name, quantity, price))
+            print("Product added\n")
 
         return product_list
 
 
     def display_all_products(product_list):
-        print("\nAll products:")
+        print("All products:")
         for product in product_list: 
             print(product.__str__())
 
@@ -130,11 +131,11 @@ def main():
         # get the generic codes list from class object
         code_list = Product.categoryCodes
 
-        print("\nFilter produAdct data from product list process:")
+        print("\nFilter product data from product list process:")
 
         # input validation and ! control
         while True: 
-            user_input = input("What category would you like to filter for? (note: enter '!' to exit): \n").strip().upper()
+            user_input = input("What category would you like to filter for? (note: enter '!' to exit): ").strip().upper()
 
             # exists the loop
             if user_input == "!":
@@ -146,7 +147,7 @@ def main():
                 print(f"{user_input} is not a valid code. please choose from {code_list}")
                 continue
 
-            # total is based on category counter 
+            # total is based on category counter
             category_counter = 0
             for product in product_list:
                 if product.product_id[:2] == user_input:
@@ -168,7 +169,6 @@ def main():
                 row = [p.product_id, p.product_name, p.category_name_of_product, f"{float(p.price):.2f}", str(p.quantity)]
                 f.write(",".join(row) + "\n")
                 print("Row written to file.")
-        print("\n")
         f.close()
 
 
