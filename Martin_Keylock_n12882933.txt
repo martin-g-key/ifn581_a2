@@ -1,0 +1,7 @@
+product_id, product_name, category_name_of_product, price, quantity
+GR001,GR Example,Groceries,99.99,10
+HB001,HB Example,Health & Beauty,2.75,25
+CF001,CF Example,Clothing & Footwear,88.50,40
+EL001,EL Example,Electronics,13.50,40
+HL001,HL Example,Home & Living,15999.00,3
+OT001,ZZ Example,Others,405.76,20
